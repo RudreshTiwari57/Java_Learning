@@ -1,8 +1,17 @@
 package java_print;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 public class data_types {
 
 	public static void main(String[] args) {
+		
 //	there are 2 data types in java:
 //		1. Primitive Data Types
 //		2. Non-Primitive Data Types
@@ -49,6 +58,55 @@ public class data_types {
 		boolean s = true;
 		System.out.printf("%b\n",s);
 		
+		
+//		------------------------------------- 2. Non-primitive Data Types
+//		In Java, non-primitive data types (also called reference types) refer to objects and store memory addresses rather than the
+//		actual data. Unlike primitive types (int, char, double, etc.), non-primitive types are created by the programmer and can hold 
+//		multiple values.
+
+
+//		Types of Non-Primitive Data Types in Java
+//		------------------------------------ a. String (Immutable sequence of characters)
+//		Example:
+
+		String name = "Rudresh";
+		System.out.println(name.toUpperCase()); // Output: RUDRESH
+
+
+
+//		---------------------------------------- b. Arrays (Fixed-size collection of elements of the same type)
+//		Example:
+
+		int[] numbers = {10, 20, 30, 40};
+		System.out.println(numbers[2]); // Output: 30
+
+
+//		------------------------------------------------ c. Collections (List, Set, Map, Queue)
+//		Collections in Java provide dynamic data structures.
+//
+//				List (Ordered, allows duplicates)
+
+		List<String> names = new ArrayList<>();
+		names.add("Alice");
+		names.add("Bob");
+		names.add("Alice");
+
+
+//				Set (Unordered, no duplicates)
+
+		Set<String> uniqueNames = new HashSet<>();
+		uniqueNames.add("Alice");
+		uniqueNames.add("Bob");
+		uniqueNames.add("Alice");
+		System.out.println(uniqueNames); // Output: [Alice, Bob]
+
+//				Map (Key-Value Pair)
+
+		Map<Integer, String> students = new HashMap<>();
+		students.put(1, "Alice");
+		students.put(2, "Bob");
+		System.out.println(students.get(1)); // Output: Alice
+
 
 	}
 
